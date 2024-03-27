@@ -4,7 +4,7 @@ NAME = megaphone
 
 all:$(NAME)
 
-$(NAME): megaphone.cpp
+$(NAME): Megaphone.cpp
 	$(CC) $(CFLAGS) -o $@ $^
 
 clean:
