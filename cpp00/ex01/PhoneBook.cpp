@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 11:10:12 by ghwa              #+#    #+#             */
-/*   Updated: 2024/04/02 10:33:24 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/04/05 14:31:04 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ void printHeader() {
 	std::cout << "|" << std::setw(10) << "First Name" << "|";
 	std::cout << std::setw(10) << "Last Name" << "|";
 	std::cout << std::setw(10) << "Nickname" << "|";
-	std::cout << std::setw(10) << "Phone No." << "|";
+	std::cout << std::setw(10) << "Phone Num" << "|";
 	std::cout << std::setw(10) << "Secret" << "|" << std::endl;
 }
