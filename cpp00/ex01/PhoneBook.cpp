@@ -6,13 +6,23 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 11:10:12 by ghwa              #+#    #+#             */
-/*   Updated: 2024/04/08 15:16:00 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/04/08 16:18:25 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <iomanip>
 #include "PhoneBook.hpp"
+#include "Contact.hpp"
+
+
+PhoneBook::PhoneBook() {
+
+}
+
+PhoneBook::~PhoneBook() {
+
+}
 
 void printHeader() {
 	for (int i = 0; i < 56;i++)

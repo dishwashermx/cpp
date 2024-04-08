@@ -6,13 +6,14 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 16:33:03 by ghwa              #+#    #+#             */
-/*   Updated: 2024/04/05 15:12:03 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/04/08 16:23:21 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <iomanip>
-#include "Main.hpp"
+#include "PhoneBook.hpp"
+#include "Contact.hpp"
 
 int	main(void) {
 	PhoneBook phonebook;
@@ -58,6 +59,10 @@ int	main(void) {
 					break;
 				std::cout << "Darkest secret cannot be empty. Please try again." << std::endl;
 			}
+			phonebook.addContact(Contact(firstName, lastName, nickname, phoneNumber, darkestSecret));
+		}
+		else if (userInput == "SEARCH") {
+			
 		}
 	}
 	return (0);

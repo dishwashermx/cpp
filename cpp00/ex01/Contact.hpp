@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 09:36:44 by ghwa              #+#    #+#             */
-/*   Updated: 2024/04/02 12:32:51 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/04/08 16:25:43 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 
 class Contact {
 	public:
-		Contact();
+		Contact(const std::string& firstName, const std::string& lastName, const std::string& nickname, const std::string& phoneNumber, const std::string& darkestSecret)
+		: firstName(firstName), lastName(lastName), nickname(nickname), phoneNumber(phoneNumber), darkestSecret(darkestSecret) {};
 		~Contact();
 		
 		std::string getFirstName() const;
