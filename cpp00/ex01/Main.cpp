@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 16:33:03 by ghwa              #+#    #+#             */
-/*   Updated: 2024/04/08 16:23:21 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/04/09 12:58:01 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,46 +24,24 @@ int	main(void) {
 		std::cin >> userInput;
 		if (userInput == "ADD") {
 			std::string firstName, lastName, nickname, phoneNumber, darkestSecret;
-			while (true) {
-				std::cout << "Enter first name: ";
-				std::cin >> firstName;
-				if (!firstName.empty()) 
-					break;
-				std::cout << "First name cannot be empty. Please try again." << std::endl;
-			}
-			while (true) {
-				std::cout << "Enter last name: ";
-				std::cin >> lastName;
-				if (!lastName.empty()) 
-					break;
-				std::cout << "Last name cannot be empty. Please try again." << std::endl;
-			}
-			while (true) {
-				std::cout << "Enter nickname: ";
-				std::cin >> nickname;
-				if (!nickname.empty()) 
-					break;
-				std::cout << "Nickname cannot be empty. Please try again." << std::endl;
-			}
-			while (true) {
-				std::cout << "Enter phone number: ";
-				std::cin >> phoneNumber;
-				if (!phoneNumber.empty()) 
-					break;
-				std::cout << "Phone number cannot be empty. Please try again." << std::endl;
-			}
-			while (true) {
-				std::cout << "Enter darkest secret: ";
-				std::cin >> darkestSecret;
-				if (!darkestSecret.empty()) 
-					break;
-				std::cout << "Darkest secret cannot be empty. Please try again." << std::endl;
-			}
+			std::cout << "Enter first name: ";
+			std::cin >> firstName;
+			std::cout << "Enter last name: ";
+			std::cin >> lastName;
+			std::cout << "Enter nickname: ";
+			std::cin >> nickname;
+			std::cout << "Enter phone number: ";
+			std::cin >> phoneNumber;
+			std::cout << "Enter darkest secret: ";
+			std::cin >> darkestSecret;
 			phonebook.addContact(Contact(firstName, lastName, nickname, phoneNumber, darkestSecret));
 		}
 		else if (userInput == "SEARCH") {
-			
+			phonebook.displayContacts();
+			phonebook.searchContact();
 		}
+		else if (userInput == "EXIT")
+			break ;
 	}
 	return (0);
 }
