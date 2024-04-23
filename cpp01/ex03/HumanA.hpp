@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 18:00:15 by ghwa              #+#    #+#             */
-/*   Updated: 2024/04/23 12:09:54 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/04/23 13:52:46 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class HumanA {
 	public:
-		HumanA(const std::string& humanAName, Weapon& weapon);
+		HumanA(const std::string name, Weapon& weapon);
 		~HumanA();
 		void attack() const;
 	private:

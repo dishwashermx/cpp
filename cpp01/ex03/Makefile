@@ -6,13 +6,13 @@
 #    By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/09 17:58:23 by ghwa              #+#    #+#              #
-#    Updated: 2024/04/23 11:25:28 by ghwa             ###   ########.fr        #
+#    Updated: 2024/04/23 14:23:14 by ghwa             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = clang++
 FLAGS = -Wall -Werror -Wextra -std=c++11
-SRCS = main.cpp Weapon.cpp
+SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJS = $(SRCS:.cpp=.o)
 NAME = main
 
