@@ -6,16 +6,17 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:40:02 by ghwa              #+#    #+#             */
-/*   Updated: 2024/05/21 16:32:34 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/08/26 11:29:04 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
 class Fixed {
 	private:
 		int _value;
-		static const int _bits;
+		static int _bits;
 
 	public:
 		Fixed();
@@ -26,3 +27,5 @@ class Fixed {
 		int getRawBits() const;
 		void setRawBits(int const raw);
 } ;
+
+#endif
