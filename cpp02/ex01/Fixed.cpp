@@ -6,12 +6,22 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:40:00 by ghwa              #+#    #+#             */
-/*   Updated: 2024/08/27 09:06:40 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/08/27 14:25:07 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Fixed.hpp"
+
+Fixed::Fixed(int i) {
+	std::cout << "Int constructer called" << std::endl;
+	this->_value = i << _bits;
+}
+
+Fixed::Fixed(float f) {
+	std::cout << "Float constructer called" << std::endl;
+	this->_value = 0;
+}
 
 Fixed::Fixed() {
 	std::cout << "Default constructer called" << std::endl;
@@ -41,4 +51,12 @@ int Fixed::getRawBits() const {
 void Fixed::setRawBits(int const raw) {
 	std::cout << "setRawBits member function called" << std::endl;
 	this->_value = raw;
+}
+
+float Fixed::toFloat(void) const {
+	
+}
+
+int Fixed::toInt(void) const {
+	
 }

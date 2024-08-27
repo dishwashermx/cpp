@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:40:02 by ghwa              #+#    #+#             */
-/*   Updated: 2024/08/27 08:56:19 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/08/27 13:26:06 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,18 @@ class Fixed {
 
 	public:
 		Fixed();
+		Fixed(int);
+		Fixed(float);
 		Fixed(const Fixed &other);
 		Fixed& operator=(const Fixed& other);
 		~Fixed();
 
 		int getRawBits() const;
 		void setRawBits(int const raw);
+		float toFloat(void) const;
+		int toInt(void) const;
 } ;
+
+std::ostream& operator<<(std::ostream &out, const Fixed &fp);
 
 #endif
