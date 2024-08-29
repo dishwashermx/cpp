@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/21 13:40:02 by ghwa              #+#    #+#             */
-/*   Updated: 2024/08/28 09:11:17 by ghwa             ###   ########.fr       */
+/*   Created: 2024/08/28 11:15:35 by ghwa              #+#    #+#             */
+/*   Updated: 2024/08/28 14:40:39 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef POINT_HPP
+#define POINT_HPP
+
 #include <iostream>
 #include <cmath>
-#ifndef FIXED_HPP
-#define FIXED_HPP
+#include "Fixed.hpp"
 
-class Fixed {
+class Point {
 	private:
-		int _value;
-		static const int _bits = 8;
+		Fixed const x;
+		Fixed const y;
 
 	public:
-		Fixed();
-		Fixed(int);
-		Fixed(float);
-		Fixed(const Fixed &other);
-		Fixed& operator=(const Fixed& other);
-		~Fixed();
-
-		int getRawBits() const;
-		void setRawBits(int const raw);
-		float toFloat(void) const;
-		int toInt(void) const;
+		Point();
+		Point(const Fixed &a, const Fixed &b);
+		Point(const Point &other);
+		Point& operator=(Point& other);
+		~Point();
+		
+		static bool bsp( Point const a, Point const b, Point const c, Point const point);
+		static float area(float x1, float y1, float x2, float y2, float x3, float y3);
 } ;
-
-std::ostream& operator<<(std::ostream &out, const Fixed &fp);
 
 #endif
