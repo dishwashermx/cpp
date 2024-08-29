@@ -1,17 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Main.cpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 16:33:03 by ghwa              #+#    #+#             */
-/*   Updated: 2024/04/09 12:58:01 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/08/29 10:50:12 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <iomanip>
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
 
@@ -39,9 +37,11 @@ int	main(void) {
 		else if (userInput == "SEARCH") {
 			phonebook.displayContacts();
 			phonebook.searchContact();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
 		else if (userInput == "EXIT")
 			break ;
+		std::cin.clear();
 	}
 	return (0);
 }

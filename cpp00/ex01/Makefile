@@ -6,13 +6,14 @@
 #    By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/05 11:08:12 by ghwa              #+#    #+#              #
-#    Updated: 2024/04/08 16:08:29 by ghwa             ###   ########.fr        #
+#    Updated: 2024/08/29 10:33:33 by ghwa             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = clang++
-FLAGS = -Wall -Werror -Wextra -fsanitize=address -std=c++11
-SRCS = PhoneBook.cpp Main.cpp Contact.cpp
+CC = g++
+FLAGS = -Wall -Werror -Wextra -std=c++11
+
+SRCS = PhoneBook.cpp main.cpp Contact.cpp
 OBJS = $(SRCS:.cpp=.o)
 NAME = phonebook
 
@@ -27,6 +28,9 @@ $(NAME): $(OBJS)
 clean:
 	rm -f $(NAME)
 
-re: clean all
+fclean: clean
+	rm -f $(OBJS)
+
+re: fclean all
 
 .PHONY: all clean re

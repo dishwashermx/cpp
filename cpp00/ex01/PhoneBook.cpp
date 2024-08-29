@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 11:10:12 by ghwa              #+#    #+#             */
-/*   Updated: 2024/04/09 13:58:58 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/08/29 10:45:59 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,25 +39,31 @@ void PhoneBook::displayContacts() const {
 	std::cout << "|Index     |First Name|Last Name |Nickname  |" << std::endl;
 	std::cout << "---------------------------------------------" << std::endl;
 	for (size_t i = 0; i < contacts.size(); ++i) {
-		std::cout << "|          " << i << "|" << truncateText(contacts[i].getFirstName()) << "|" << truncateText(contacts[i].getLastName())
+		std::cout << "|         " << i << "|" << truncateText(contacts[i].getFirstName()) << "|" << truncateText(contacts[i].getLastName())
 		<< "|" << truncateText(contacts[i].getNickname()) << "|" << std::endl;
 	}
 }
 
 void PhoneBook::searchContact() const {
-	int index;
+	char index;
 	if (contacts.size() > 0) {
 		std::cout << "Enter the index of the contact you want to display: ";
 		std::cin >> index;
-		if (index >= 0 && index < static_cast<int>(contacts.size())) {
-			std::cout << "First Name: " << contacts[index].getFirstName() << std::endl;
-			std::cout << "Last Name: " << contacts[index].getLastName() << std::endl;
-			std::cout << "Nickname: " << contacts[index].getNickname() << std::endl;
-			std::cout << "Phone Number: " << contacts[index].getPhoneNumber() << std::endl;
-			std::cout << "Darkest Secret: " << contacts[index].getDarkestSecret() << std::endl;
+		std::cout << index << std::endl;
+		if (index >= '0' && index <= '9') {
+			int intIndex = index - '0';
+			if (intIndex >= 0 && intIndex < static_cast<int>(contacts.size())) {
+				std::cout << "First Name: " << contacts[intIndex].getFirstName() << std::endl;
+				std::cout << "Last Name: " << contacts[intIndex].getLastName() << std::endl;
+				std::cout << "Nickname: " << contacts[intIndex].getNickname() << std::endl;
+				std::cout << "Phone Number: " << contacts[intIndex].getPhoneNumber() << std::endl;
+				std::cout << "Darkest Secret: " << contacts[intIndex].getDarkestSecret() << std::endl;
+			}
+			else 
+				std::cout << "Invalid index. Please try again." << std::endl;
 		}
 		else
-			std::cout << "Invalid index. Please try again." << std::endl;
+			std::cout << "Invalid input. Please enter a valid digit." << std::endl;
 	}
 }
 
