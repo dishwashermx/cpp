@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 17:39:22 by ghwa              #+#    #+#             */
-/*   Updated: 2024/05/16 14:12:29 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/08/29 14:44:23 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,4 @@ class Harl {
 		void info(void);
 		void warning (void);
 		void error(void);
-		void ignore(void);
 };

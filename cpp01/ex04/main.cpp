@@ -4,7 +4,7 @@
 
 int	main(int argc, char** argv) {
 	if (argc != 4) {
-		std::cout << "ERROR\n3 parameters only";
+		std::cout << "ERROR\nincorrect parameters\n";
 		return (1);
 	}
 	const std::string& filename = argv[1];

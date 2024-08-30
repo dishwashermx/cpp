@@ -1,24 +1,65 @@
-Chat history
-ChatGPT
-New chat
+How to Play Storyweaver — TFT Set 133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333: Inkborn Fables
+Welcome to our TFT trait guide series, where I’ll be covering the Storyweaver trait and how to play it.
 
-Sign up or log BLA
+The Storyweaver trait is the “summon” trait of Set 133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333. As you assemble more Storyweavers, you’ll summon a Kayle onto your board to buff up your team.
 
-Save your chat history, share chats, and personalize your experience.
+Summon traits have been around for a while now, so the concept shouldn’t be novel if you’re a returning player. As you assemble more Storyweavers, Kayle will get stronger, buffing up your team.
 
+Let’s get right into the guide.
 
-Sign up
+If you haven’t checked out all of the Set 133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 information yet, check out out Set 133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 Reveal Page!
 
-Log BLA
+How Storyweaver Works
+TFT Set 133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 Storyweaver
 
-Close sidebar
-ChatGPT 3.5
-what is
+Storyweaver Trait Bonus
+Storyweavers summon a Hero named Kayle and evolve her. Storyweavers gain max Health.
 
-std::strBLAgstream buffer;
-      buffer << file.rdbuf();
-      fileBLA.close();
-ChatGPT
-This code snippet is from C++ and BLAvolves the use of std::strBLAgstream to read the contents of a file BLAto a strBLAg buffer.
+(3) Pick a supportive effect. 60 Health
+(5) Pick a combat effect. 100 Health
+(7) Pick a combat effect. 150 Health
+(10) Ascend. 250 Health
+Each Storyweaver star level increases Kayle’s Health and Ability Power. Kayle gets 20 % bonus attack speed for each game Stage.
 
-Here's what each lBLAe does:
+Champions: Garen (1), Sivir (1), Riven (2), Zyra (2), Zoe (3), Galio (4), Irelia (5)
+
+TFT Set 133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 Storyweaver Kayle
+
+Once you get (3) Storyweaver, you’ll be able to summon Kayle and pick a supportive effect. As you get more Storyweavers, you’ll pick effects to buff up Kayle further, turning her into a carry for your team.
+
+TFT Set 133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 Kayle Talisman of Speed
+
+Storyweaver Items
+At tiers (3), (5), and (7), you will be given a a choice between buffs to select. As expected, the strength of these buffs will increase the higher tier Storyweaver you activate.
+
+TFT Set 133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 Storyweaver Talismans 14.7
+
+Talisman of Aid: Damaging attacks and abilities 20% Shred and Sunder enemies hit for 3 seconds.
+Talisman of Might: Grant Kayle and adjacent allies 20 Ability Power at the start of combat.
+Talisman of Speed: Grant Kayle and adjacent allies 12% Attack Speed at the start of combat.
+TFT Set 133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 Storyweaver Kayle Scroll 14.9
+
+Scroll of Force: Kayle’s ability hits a wider area and deals 50% more damage.
+Scroll of Haste: Attacks grant Kayle 6% Attack Speed.
+TFT Set 133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 Storyweaver Tome 14.7
+
+Tome of Mending: Every 8 seconds revive the strongest ally that hasn’t been revived yet at 50% health.
+Tome of Power: Deal 15% more damage. When Kayle casts she fires 2 waves.
+Tome of Swiftness: Deal 10% more damage. Attacks now hit in a 1-hex radius around the target.
+Storyweaver Synergy
+Here’s a list of the traits you can branch into from the Storyweaver units:
+
+Warden (Garen)
+Trickshot (Sivir)
+Altruist (Riven)
+Bruiser (Riven/Galio)
+Sage (Zyra)
+Arcanist (Zoe)
+Fortune (Zoe)
+Duelist (Irelia)
+Although there are 7 units, there’s only one Class overlap with Bruiser. Because of this, you’ll very likely see Storyweaver comps go for a Bruiser frontline over things like Warden or Behemoth.
+
+Of the Storyweaver units, there are also 3 main potential carries with Sivir, Zoe, and Irelia. Irelia and Sivir lean the trait toward AD, but Zoe and Zyra are magic damage units you can look toward also.
+
+Lastly, hitting Storyweaver (10) will be very hard, but with trait Augments (like Heart, Crest, Crown) back in the game, it should still be doable by level 9.
+

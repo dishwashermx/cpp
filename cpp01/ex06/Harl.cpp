@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 17:39:24 by ghwa              #+#    #+#             */
-/*   Updated: 2024/08/26 10:31:35 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/08/29 14:51:33 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,19 +51,19 @@ void Harl::complain(std::string level) {
 }
 
 void Harl::debug() {
-	std::cout << "[ HARL / DEBUG ]" << std::endl;
+	std::cout << "[ HARL // DEBUG ]" << std::endl;
 }
 
 void Harl::info() {
-	std::cout << "[ HARL / INFO]" << std::endl;
+	std::cout << "[ HARL // INFO]" << std::endl;
 }
 
 void Harl::warning() {
-	std::cout << "[ HARL / WARNING ]" << std::endl;
+	std::cout << "[ HARL // WARNING ]" << std::endl;
 }
 
 void Harl::error() {
-	std::cout << "[ HARL / ERROR ]" << std::endl;
+	std::cout << "[ HARL // ERROR ]" << std::endl;
 }
 
 void Harl::ignore() {

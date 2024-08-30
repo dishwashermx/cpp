@@ -6,11 +6,11 @@
 #    By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/09 17:58:23 by ghwa              #+#    #+#              #
-#    Updated: 2024/04/16 12:07:59 by ghwa             ###   ########.fr        #
+#    Updated: 2024/08/29 14:08:15 by ghwa             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = clang++
+CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++11
 SRCS = Zombie.cpp main.cpp zombieHorde.cpp
 OBJS = $(SRCS:.cpp=.o)
