@@ -12,44 +12,62 @@
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : name("[Cl4P-TP]"){
-	std::cout << "Clapbot activated." << std::endl;
+ClapTrap::ClapTrap() : name("[Cl4P-TP]"), _hp(10), _energy(10), _dmg(0) {
+    std::cout << "Clapbot activated." << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : name(name) {
-	std::cout << name << " activated." << std::endl;
-	_hp = 10;
-	_energy = 10;
-	_dmg = 0;
+ClapTrap::ClapTrap(std::string name) : name(name), _hp(10), _energy(10), _dmg(0) {
+    std::cout << name << " activated." << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &other) {
-	std::cout << this.name << " cloned." << std::endl;
-	*this = other;
+ClapTrap::ClapTrap(const ClapTrap& other) : name(other.name + " clone"), _hp(other._hp), _energy(other._energy), _dmg(other._dmg) {
+    std::cout << other.name << " cloned." << std::endl;
 }
 
-ClapTrap& ClapTrap::operator=(const ClapTrap &other) {
-	std::cout << other.name << " morphed into " this.name << std::endl;
-	this->_hp = other._hp;
-	this->_energy = other._energy;
-	this->_dmg = other._dmg;
-	return (*this);
+ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
+    std::cout << this->name << " morphed into " << other.name << std::endl;
+    if (this != &other) {
+        this->name = other.name + " morph";
+        this->_hp = other._hp;
+        this->_energy = other._energy;
+        this->_dmg = other._dmg;
+    }
+    return *this;
 }
 
 ClapTrap::~ClapTrap() {
-	std::cout << name << " terminated." << std::endl;
+    std::cout << name << " terminated." << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target) {
-	std::cout << _name << "attacks " << _target << \
-	", causing " << _dmg << " points of damage." << std::endl;
+	if (_hp < 1)
+		std::cout << name << " tries to get up and falls down again." << std::endl;
+	else if (_energy < 1)
+		std::cout << name << " sputters and powers down." << std::endl;
+	else
+	{
+		std::cout << name << " attacks " << target << ", causing " << _dmg << " points of damage." << std::endl;
+		_energy -= 1;
+	}
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
-	std::cout << _name << "takes " << amount << " of damage." << std::endl;
+	std::cout << name << " takes " << amount << " of damage." << std::endl;
 	_hp -= amount;
+	if (_hp < 0) {
+        _hp = 0;
+        std::cout << name << " is destroyed!" << std::endl;
+    }
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
-	std::cout << _name << " repairs for " << amount << " of hp." << std::endl;
+	if (_hp < 1)
+		std::cout << name << " tries to get up and falls down again." << std::endl;
+	else if (_energy < 1)
+		std::cout << name << " sputters and powers down." << std::endl;
+	else {
+		std::cout << name << " repairs for " << amount << " of hp." << std::endl;
+		_energy -= 1;
+	}
+
 }

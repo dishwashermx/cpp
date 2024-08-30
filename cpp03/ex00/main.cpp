@@ -15,11 +15,24 @@
 int main(void) {
     ClapTrap C1;
     ClapTrap C2("Clappy");
-    ClapTrap C3(C2);
-    ClapTrap C4 = C1;
+    ClapTrap C3(C1);
+    ClapTrap C4("Trappy");
+    C1 = C2;
     
-    C1.attack("Clappy");
-    C2.takeDamage(10);
-    C2.beRepaired(1);
+    C1.attack("the air");
+    C1.attack("the air");
+    C1.attack("the air");
+    C1.attack("the air");
+    C1.attack("the air");
+    C1.attack("the air");
+    C1.attack("the air");
+    C1.attack("the air");
+    C1.attack("the air");
+    C1.attack("the air");
+    C1.attack("the air");
+    C3 = C1;
+    C3.attack("the ground");
+    C4.takeDamage(20);
+    C4.beRepaired(1);
     return (0);
 }
