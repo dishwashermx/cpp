@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/09 17:58:23 by ghwa              #+#    #+#              #
-#    Updated: 2024/08/30 09:14:06 by ghwa             ###   ########.fr        #
+#    Created: 2024/05/21 13:39:06 by ghwa              #+#    #+#              #
+#    Updated: 2024/08/30 16:24:08 by ghwa             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
-FLAGS = -Wall -Werror -Wextra -std=c++11
-SRCS = Zombie.cpp main.cpp
+FLAGS = -Wall -Werror -Wextra -std=c++98
+SRCS = main.cpp ClapTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
-NAME = zombie
+NAME = a.out
 
 all:$(NAME)
 
