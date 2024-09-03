@@ -17,7 +17,7 @@
 #include <iostream>
 
 class ClapTrap {
-	private:
+	protected:
 		std::string name;
 		int _hp;
 		int _energy;
@@ -28,11 +28,11 @@ class ClapTrap {
 		ClapTrap(const ClapTrap &other);
 		ClapTrap& operator=(const ClapTrap& other);
 		~ClapTrap();
-		void attackMsg();
-		void defendMsg();
-		void repairMsg();
-		void noHp();
-		void noEnergy();
+		virtual void attackMsg();
+		virtual void defendMsg();
+		virtual void repairMsg();
+		virtual void noHp();
+		virtual void noEnergy();
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);

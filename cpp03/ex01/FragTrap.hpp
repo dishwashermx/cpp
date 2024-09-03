@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/30 16:17:00 by ghwa              #+#    #+#             */
-/*   Updated: 2024/09/03 15:52:34 by ghwa             ###   ########.fr       */
+/*   Created: 2024/09/02 15:06:30 by ghwa              #+#    #+#             */
+/*   Updated: 2024/09/03 15:46:29 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
+
 #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
 
-int main(void) {
-	FragTrap F1;
-	ClapTrap C2("Clappy");
-	ScavTrap T2("Scavvy");
+class FragTrap : public ClapTrap {
+	public:
+		FragTrap();
+		FragTrap(std::string name);
+		FragTrap(const FragTrap &other);
+		FragTrap& operator=(const FragTrap& other);
+		~FragTrap();
+		void attackMsg();
+		void defendMsg();
+		void repairMsg();
+		void noHp();
+		void noEnergy();
+		void highFivesGuys();
+} ;
 
-	F1.highFivesGuys();
-	F1.attack("Clappy");
-	C2.takeDamage(40);
-	T2.guardGate();
-	T2.takeDamage(200);
-	F1.beRepaired(10);
-	return (0);
-}
+#endif

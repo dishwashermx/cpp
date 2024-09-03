@@ -6,14 +6,14 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 15:06:30 by ghwa              #+#    #+#             */
-/*   Updated: 2024/09/02 15:14:01 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/09/03 15:36:32 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 #define SCAVTRAP_HPP
 
-#include "ClapTrap.cpp"
+#include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap {
 	public:
@@ -27,6 +27,7 @@ class ScavTrap : public ClapTrap {
 		void repairMsg();
 		void noHp();
 		void noEnergy();
+		void guardGate();
 } ;
 
 #endif

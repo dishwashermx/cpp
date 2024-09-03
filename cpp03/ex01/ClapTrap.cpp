@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/30 13:49:32 by ghwa              #+#    #+#             */
-/*   Updated: 2024/09/02 15:17:22 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/09/03 15:33:13 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void ClapTrap::repairMsg() {
 }
 
 void ClapTrap::noHp() {
-	std::cout << name << " circuits fry and shortcircuits." << std::endl;
+	std::cout << name << "'s circuits fry and shortcircuits." << std::endl;
 }
 
 void ClapTrap::noEnergy() {
@@ -90,8 +90,4 @@ void ClapTrap::beRepaired(unsigned int amount) {
 		std::cout << name << " heals for " << amount << " points of health." << std::endl;
 		_energy -= 1;
 	}
-}
-
-std::string ClapTrap::getName() const {
-	return (name);
 }
