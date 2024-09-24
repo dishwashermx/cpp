@@ -6,28 +6,28 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/30 13:49:32 by ghwa              #+#    #+#             */
-/*   Updated: 2024/08/30 16:24:00 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/09/02 15:01:31 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : name("[Cl4P-TP]"), _hp(10), _energy(10), _dmg(0) {
-    std::cout << "Clapbot activated." << std::endl;
+ClapTrap::ClapTrap() : name("[CL4P-TP]"), _hp(10), _energy(10), _dmg(0) {
+	std::cout << "Clapbot activated." << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : name(name), _hp(10), _energy(10), _dmg(0) {
-    std::cout << name << " activated." << std::endl;
+    std::cout << name << " fizzed alive and glows faintly." << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& other) : name(other.name + " clone"), _hp(other._hp), _energy(other._energy), _dmg(other._dmg) {
-    std::cout << other.name << " cloned." << std::endl;
+ClapTrap::ClapTrap(const ClapTrap& other) : name(other.name + "-clone"), _hp(other._hp), _energy(other._energy), _dmg(other._dmg) {
+    std::cout << this->name << " fizzed alive and glows faintly." << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
-    std::cout << this->name << " morphed into " << other.name << std::endl;
+    std::cout << this->name << " morphes into " << other.name << std::endl;
     if (this != &other) {
-        this->name = other.name + " morph";
+        this->name = other.name + "-morph";
         this->_hp = other._hp;
         this->_energy = other._energy;
         this->_dmg = other._dmg;
@@ -36,38 +36,58 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
 }
 
 ClapTrap::~ClapTrap() {
-    std::cout << name << " terminated." << std::endl;
+    std::cout << name << " breaks down again." << std::endl;
 }
 
-void ClapTrap::attack(const std::string& target) {
+void ClapTrap::attackMsg() {
+	std::cout << name << "'s servos extend toward ";
+}
+
+void ClapTrap::defendMsg() {
+	std::cout << name << ": ...c-ccreEEEAAKKK" << std::endl;
+}
+
+void ClapTrap::repairMsg() {
+	std::cout << name << " turns on and turns off." << std::endl;
+}
+
+void ClapTrap::noHp() {
+	std::cout << name << " circuits fry and shortcircuits." << std::endl;
+}
+
+void ClapTrap::noEnergy() {
+	std::cout << name << " sputters and powers down." << std::endl;
+}
+
+void ClapTrap:: attack(const std::string& target) {
 	if (_hp < 1)
-		std::cout << name << " tries to get up and falls down again." << std::endl;
+		this->noHp();
 	else if (_energy < 1)
-		std::cout << name << " sputters and powers down." << std::endl;
+		this->noEnergy();
 	else
 	{
-		std::cout << name << " attacks " << target << ", causing " << _dmg << " points of damage." << std::endl;
 		_energy -= 1;
+		attackMsg();
+		std::cout << target << std::endl;
 	}
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
-	std::cout << name << " takes " << amount << " of damage." << std::endl;
 	_hp -= amount;
-	if (_hp < 0) {
-        _hp = 0;
+	defendMsg();
+	std::cout << name << " takes " << amount << " points of damage." << std::endl;
+	if (_hp < 1)
         std::cout << name << " is destroyed!" << std::endl;
-    }
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
 	if (_hp < 1)
-		std::cout << name << " tries to get up and falls down again." << std::endl;
+		noHp();
 	else if (_energy < 1)
-		std::cout << name << " sputters and powers down." << std::endl;
+		noEnergy();
 	else {
-		std::cout << name << " repairs for " << amount << " of hp." << std::endl;
+		repairMsg();
+		std::cout << name << " heals for " << amount << " points of health." << std::endl;
 		_energy -= 1;
 	}
-
 }

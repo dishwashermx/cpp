@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 16:27:02 by ghwa              #+#    #+#             */
-/*   Updated: 2024/08/28 11:07:14 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/09/06 13:29:03 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int main( void ) {
 	std::cout << (b <= a) << std::endl;
 	std::cout << (a == b) << std::endl;
 	std::cout << (a != a) << std::endl;
+	std::cout << Fixed::max( a, b ) << std::endl;
+	std::cout << Fixed::min( a, b ) << std::endl;
 
 	std::cout << "\ntesting arithmatic operators" << std::endl;
 	std::cout << (a + b) << std::endl;
@@ -37,6 +39,5 @@ int main( void ) {
 	std::cout << a << std::endl;
 	std::cout << a++ << std::endl;
 	std::cout << a << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 18:01:09 by ghwa              #+#    #+#             */
-/*   Updated: 2024/08/29 12:59:56 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/09/06 13:22:39 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	main(void) {
 	std::string name1 = "Anya";
-	Z1 Zombie(name1);
-	Zombie::announce();
+	Zombie(name1);
+	Zombie.announce();
 }

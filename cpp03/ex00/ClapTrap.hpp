@@ -2,7 +2,7 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
+/*                  l                                  +:+ +:+         +:+     */
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/30 13:49:58 by ghwa              #+#    #+#             */
@@ -28,6 +28,11 @@ class ClapTrap {
 		ClapTrap(const ClapTrap &other);
 		ClapTrap& operator=(const ClapTrap& other);
 		~ClapTrap();
+		void attackMsg();
+		void defendMsg();
+		void repairMsg();
+		void noHp();
+		void noEnergy();
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
