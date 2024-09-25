@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 15:06:21 by ghwa              #+#    #+#             */
-/*   Updated: 2024/09/03 15:52:50 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/09/25 14:10:46 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 FragTrap::FragTrap() : ClapTrap() {
 	name = ("[FR4G-TP]");
 	_hp = 100;
-	_energy = 50;
-	_dmg = 20;
+	_energy = 100;
+	_dmg = 30;
 	std::cout << "Fragbot activated." << std::endl;
 }
 

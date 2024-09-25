@@ -6,13 +6,13 @@
 #    By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/21 13:39:06 by ghwa              #+#    #+#              #
-#    Updated: 2024/09/24 13:01:54 by ghwa             ###   ########.fr        #
+#    Updated: 2024/09/03 15:45:00 by ghwa             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98 -pedantic
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
 NAME = a.out
 
