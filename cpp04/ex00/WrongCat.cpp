@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 10:31:39 by ghwa              #+#    #+#             */
-/*   Updated: 2024/09/09 10:32:03 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/10/01 09:14:50 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ WrongCat::~WrongCat() {
 }
 
 void WrongCat::makeSound() const {
-    WrongAnimal::makeSound();
+    std::cout << "WrongCat Sound" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 10:32:17 by ghwa              #+#    #+#             */
-/*   Updated: 2024/09/09 10:32:18 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/10/01 09:14:20 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int main() {
     const WrongAnimal* wrongCat = new WrongCat();
 
     std::cout << wrongCat->getType() << std::endl;
-    wrongCat->makeSound();  // This will print WrongAnimal's sound
+    wrongCat->makeSound();
     wrongMeta->makeSound();
 
     delete wrongMeta;

@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 10:29:41 by ghwa              #+#    #+#             */
-/*   Updated: 2024/09/09 10:29:43 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/10/01 09:14:36 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public:
     WrongAnimal& operator=(const WrongAnimal& other);
     virtual ~WrongAnimal();
 
-    void makeSound() const;  // No virtual keyword here, intentional mistake
+    void makeSound() const;  // No virtual keyword here
     std::string getType() const;
 };
 
