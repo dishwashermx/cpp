@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bereaucrat.cpp                                     :+:      :+:    :+:   */
+/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 17:12:07 by ghwa              #+#    #+#             */
-/*   Updated: 2024/11/06 09:23:44 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/11/06 14:50:53 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ Bureaucrat::Bureaucrat(const Bureaucrat &other) : _name(other._name), _grade(oth
 	std::cout << "Bureaucrat Copy Constructor called" << std::endl;
 }
 
-Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other) : _name(other._name), _grade(other._grade) {
+Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other) {
 	std::cout << "Bureaucrat Copy Assignment called" << std::endl;
-	if (this != &other)
-		return (*this);
+	if (this != &other) {
+		this->_grade = other._grade;
+	}
+	return (*this);
 }
 
 Bureaucrat::~Bureaucrat() {
@@ -39,7 +41,7 @@ const std::string Bureaucrat::getName() const {
 	return (this->_name);
 }
 
-const int Bureaucrat::getGrade() const {
+int Bureaucrat::getGrade() const {
 	return (this->_grade);
 }
 
