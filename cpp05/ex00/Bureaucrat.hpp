@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 17:12:05 by ghwa              #+#    #+#             */
-/*   Updated: 2024/11/05 11:29:52 by ghwa             ###   ########.fr       */
+/*   Updated: 2024/11/06 09:22:09 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class Bureaucrat {
 	private:
-		setGrade(int newGrade);
+		void setGrade(int newGrade);
 		const std::string _name;
 		int _grade;
 	public:
@@ -27,6 +27,12 @@ class Bureaucrat {
 		Bureaucrat(const Bureaucrat &other);
 		Bureaucrat& operator=(const Bureaucrat& other);
 		~Bureaucrat();
+
+		const std::string getName() const;
+		const int getGrade() const;
+		void incrementGrade();
+		void decrementGrade();
+
 		class GradeTooLowException : public std::exception {
 			public:
 				virtual const char *what() const throw();};
@@ -34,5 +40,7 @@ class Bureaucrat {
 			public:
 				virtual const char *what() const throw();};
 } ;
+
+std::ostream& operator<<(std::ostream& out, const Bureaucrat& bureaucrat);
 
 #endif
